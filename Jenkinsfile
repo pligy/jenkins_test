@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/pligy/jenkins_test.git'
-                sh 'python main.py'
+                bat 'python main.py'
             }
         }
         stage('Archive') {
